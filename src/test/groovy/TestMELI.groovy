@@ -12,7 +12,7 @@ class TestMELI extends BaseMELI{
 
     private static final Logger log = LogManager.getLogger(TestMELI.class);
 
-    @Test(groups = "simple",dataProvider="DataContainer", dataProviderClass = BaseMELI.class)
+    @Test(groups = "TestMeli",dataProvider="DataContainer", dataProviderClass = BaseMELI.class)
     public void criteriaMatchesWithResult(String searchCriteria) {
         Response response=get("/sites/MLA/search?q="+searchCriteria)
         String [] resultSearch = response.path("results.title")

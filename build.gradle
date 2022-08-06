@@ -28,6 +28,6 @@ test {
         useDefaultListeners(true)
         reports.html.enabled(false)
         parallel="tests"
-        includeGroups 'simple'
+        includeGroups 'TestMeli'
     }
 }
