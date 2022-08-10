@@ -1,42 +1,41 @@
- - Title: Test Mercado Libre Groovy-TestNG-REST-Assured
+ # Test Mercado Libre Groovy-TestNG-REST-Assured
+## Resume:
+•	To achieve this test framework, the following scenario with Mercado Libre API was taken:
 
- - Resume: Test on Mercado Libre API
+**Carry out a search in Mercado Libre for 3 different items and validate that the search results contain the word used as search criteria.**
+________________________________________
+•	In order to automate test cases, the following classes and files were created:
 
- - Technologies used:
+***1. build.gradle*** file to define the build configurations that will be applied to all the modules in the project.
 
-     - Language: Groovy
+***2. Base page groovy class*** to implements methods setting baseUri, Headers, Request Specifications so this can be inherited from other pages.
 
-    - Building Tool: Gradle
+***3. Page groovy class*** where we are going to implement the methods to validate the test cases.
 
-   - Libraries: REST Assured-TestNG
+________________________________________
+## Technologies used:
 
- - Enviroment Configuration:
-   - Download and set JAVA environment variables (JAVA_HOME and PATH) : JDK (17.0.2)
+-	Language: Groovy
 
-   - Download and installation IDE (IntelliJ IDEA)
- 
- - TestNG Reports:
+-	Building Tool: Gradle
 
-   - build/reports/tests/test/index.html
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-	Libraries: REST Assured-TestNG
 
-- Título: Test Mercado Libre Groovy-TestNG-REST-Assured
+* Enviroment Configuration:
 
-- Resumen: Pruebas en la API de Mercado Libre
+  - Download and set JAVA environment variables (JAVA_HOME and PATH):JDK (17.0.2)
 
-- Tecnologías usadas:
+  - Download and installation IDE (IntelliJ IDEA)
 
-  -  Lenguaje: Groovy
-
-  -  Building Tool: Gradle
-
-  -  Librerías: REST Assured-TestNG
-
-- Configuración de ambiente:
-  - Download and set JAVA environment variables (JAVA_HOME and PATH) : JDK (17.0.2)
-
-  - Descarga e instalacion IDE (IntelliJ IDEA)
-
-- Reportes TestNG:
+* TestNG Reports:
 
   - build/reports/tests/test/index.html
+  
+
+* Run Tests:
+
+   - gradle clean
+   
+   - gradle test -D TestMeli
+
+ 
