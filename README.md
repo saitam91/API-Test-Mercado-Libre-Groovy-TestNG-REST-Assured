@@ -1,4 +1,4 @@
- # Test Mercado Libre Groovy-TestNG-REST-Assured
+ # Test Mercado Libre / Groovy-TestNG-REST-Assured
 ## Resume:
 •	To achieve this test framework, the following scenario with Mercado Libre API was taken:
 
