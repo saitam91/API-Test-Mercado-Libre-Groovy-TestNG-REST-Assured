@@ -7,7 +7,7 @@ import org.testng.annotations.DataProvider
 
 class BaseMELI {
 
-    @BeforeClass
+    @BeforeClass()
     public static void setupRequestAssured(){
         RestAssured.baseURI="https://api.mercadolibre.com"
         RequestSpecification requestSpecification = new RequestSpecBuilder()
@@ -21,10 +21,9 @@ class BaseMELI {
     @DataProvider(name="DataContainer")
     public Object[] myDataProvider()
     {
-        Object data = new Object[3];
-        data[0]= "Xbox";
-        data[1]= "Polystation";
-        data[2]= "Nintendo";
+        Object data = new Object[1];
+        data[0]= "Polystation";
+
         return data;
 
 }

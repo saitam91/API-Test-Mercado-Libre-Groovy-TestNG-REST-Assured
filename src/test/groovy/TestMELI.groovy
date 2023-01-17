@@ -1,11 +1,12 @@
-
+import io.restassured.RestAssured
 import io.restassured.response.Response
 import org.apache.log4j.LogManager
 import org.apache.log4j.Logger
 import org.testng.annotations.Test
 
 import static io.restassured.RestAssured.get
-import static org.junit.Assert.assertTrue
+import static org.junit.jupiter.api.Assertions.*
+
 
 class TestMELI extends BaseMELI{
 
@@ -14,7 +15,7 @@ class TestMELI extends BaseMELI{
     @Test(groups = "TestMeli",dataProvider="DataContainer", dataProviderClass = BaseMELI.class)
     public void criteriaMatchesWithResult(String searchCriteria) {
 
-        Response response=get("/sites/MLA/search?q="+searchCriteria)
+        Response response= get("/sites/MLA/search?q=" + searchCriteria)
 
         String [] resultSearch = response.path("results.title")
         String[] criteria = searchCriteria.split(" ");

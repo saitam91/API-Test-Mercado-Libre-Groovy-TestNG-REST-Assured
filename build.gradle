@@ -10,14 +10,19 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.codehaus.groovy:groovy-all:3.0.11'
-    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.4.0'
+    // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
+    implementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.13', ext: 'pom'
+
+
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.3.0'
     testImplementation group: 'org.testng', name: 'testng', version: '7.4.0'
     testImplementation group: 'io.rest-assured', name: 'json-schema-validator', version: '3.0.3'
     implementation group: 'log4j', name: 'log4j', version: '1.2.17'
     testImplementation 'org.slf4j:slf4j-simple:1.7.36'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.9.1'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.9.1'
+
 }
 
 test {
@@ -27,5 +32,7 @@ test {
         reports.html.enabled(false)
         parallel="tests"
         includeGroups 'TestMeli'
+
 }
+
 }
